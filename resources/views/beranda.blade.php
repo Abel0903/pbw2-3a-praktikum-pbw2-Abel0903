@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="utf-8">
-    <title>{{ $kantin['nama'] }}</title>
-</head>
-<body>
-    <h1>{{ $kantin['nama'] }}</h1>
+@extends('layouts.app')
+
+@section('judul', $kantin['nama'])
+
+@section('isi')
+    <h2>Selamat datang di {{ $kantin['nama'] }}</h2>
     <p>Lokasi: {{ $kantin['lokasi'] }}</p>
     <p>Jam buka: {{ $kantin['jam'] }}</p>
-</body>
-</html>
+@endsection
